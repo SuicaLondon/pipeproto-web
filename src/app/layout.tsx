@@ -21,13 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "flex")}>
+      <body className={clsx(inter.className, "flex h-screen w-screen")}>
         <Providers>
           <SideBar />
 
-          <main>
+          <main className="h-full flex-1 flex flex-col">
             <Header />
-            {children}
+            <section className="flex-1">{children}</section>
           </main>
         </Providers>
       </body>

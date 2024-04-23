@@ -2,19 +2,19 @@
 import { Fragment, memo, useEffect, useState } from "react";
 import { Handle, NodeProps, Position } from "reactflow";
 
-export interface TableConfig {
+export type TableConfig = {
   name: string;
   type: string;
-}
+};
 
-export interface ITableNodeData {
+export type TableNodeData = {
   label: string;
   configs: TableConfig[];
-}
+};
 
 export const TableNode = memo(function TableNode({
   data: { label, configs },
-}: NodeProps<ITableNodeData>) {
+}: NodeProps<TableNodeData>) {
   return (
     <div className="rounded-lg border-2 ebg-purple-300 min-w-44 overflow-hidden border-gray-500 dark:text-black">
       <div className="text-lg bg-purple-100 p-2 text-center">{label}</div>

@@ -1,12 +1,11 @@
 "use client";
-import React, { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import ReactFlow, {
   addEdge,
   Background,
   BackgroundVariant,
   Connection,
   Controls,
-  MiniMap,
   NodeResizer,
   NodeToolbar,
   NodeTypes,

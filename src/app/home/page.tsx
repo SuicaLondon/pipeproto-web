@@ -29,12 +29,10 @@ const initialEdges: Parameters<typeof useEdgesState>[0] =
 
 export default function HomePage() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <TableDiagram
-        initialNodes={initialNodes}
-        initialEdges={initialEdges}
-        nodeTypes={nodeTypes}
-      />
-    </div>
+    <TableDiagram
+      initialNodes={initialNodes}
+      initialEdges={initialEdges}
+      nodeTypes={nodeTypes}
+    />
   );
 }
