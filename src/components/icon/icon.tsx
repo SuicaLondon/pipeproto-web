@@ -33,9 +33,9 @@ export function Icon({ icon, className }: IconProps) {
     <Suspense fallback={null}>
       <Svg
         className={clsx(
-          "w-6 h-6",
-          "fill-gray-600 dark:fill-white object-contain",
-          className
+          "h-6 w-6",
+          "fill-gray-600 object-contain dark:fill-white",
+          className,
         )}
       />
     </Suspense>

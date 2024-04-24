@@ -31,3 +31,12 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .center {
+    @apply flex items-center justify-center;
+  }
+  .bg-theme {
+    @apply bg-white dark:bg-gray-900;
+  }
+}

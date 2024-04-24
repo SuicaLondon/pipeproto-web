@@ -1,4 +1,4 @@
-import { Header } from "@/components";
+import { ManageButtonGroup, Header } from "@/components";
 import { SideBar } from "@/components/side-bar/side-bar";
 import clsx from "clsx";
 import type { Metadata } from "next";
@@ -21,14 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "flex h-screen w-screen")}>
+      <body
+        className={clsx(inter.className, "bg-theme flex h-screen w-screen")}
+      >
         <Providers>
           <SideBar />
 
-          <main className="h-full flex-1 flex flex-col">
+          <main className="flex h-full flex-1 flex-col">
             <Header />
             <section className="flex-1">{children}</section>
           </main>
+          <ManageButtonGroup />
         </Providers>
       </body>
     </html>

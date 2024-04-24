@@ -4,8 +4,9 @@ import clsx from "clsx";
 import { useAtomValue } from "jotai";
 import Link from "next/link";
 import { SideBarToggleButton } from "./side-bar-toggle-button";
+import { memo } from "react";
 
-export function SideBar() {
+export const SideBar = memo(function SideBar() {
   const isOpen = useAtomValue(sideBarOpenAtom);
 
   return (
@@ -15,9 +16,9 @@ export function SideBar() {
         "flex flex-col items-start",
         "relative overflow-x-hidden transition-all",
         {
-          "-translate-x-64 w-0 p-0": !isOpen,
-          "translate-x-0 w-64 p-4": isOpen,
-        }
+          "w-0 -translate-x-64 p-0": !isOpen,
+          "w-64 translate-x-0 p-4": isOpen,
+        },
       )}
     >
       <SideBarToggleButton />
@@ -25,4 +26,4 @@ export function SideBar() {
       <div>Quick Search</div>
     </nav>
   );
-}
+});
